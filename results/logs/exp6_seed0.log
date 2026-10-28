@@ -1,0 +1,21 @@
+device=cuda  seeds=[0]  experiments=['6']  out=../results_camera/exp6_seed0
+
+==============================================================================
+[exp6] System inference overhead, batch size 256
+==============================================================================
+-- seed 0
+    Raw (No Refiner): 0.39 ms/batch  (0.0015 ms/window), 64.2 MB, 0.00M params
+    iTransformer: 1.69 ms/batch  (0.0066 ms/window), 86.5 MB, 0.18M params
+    TIMBA: 0.82 ms/batch  (0.0032 ms/window), 97.5 MB, 0.01M params
+    CSDI: 216.79 ms/batch  (0.8468 ms/window), 144.4 MB, 1.34M params
+    TADR (Ours): 217.36 ms/batch  (0.8491 ms/window), 144.4 MB, 1.34M params
+
+[exp6] aggregated over 1 run(s)
+         Refiner  n_runs  Latency_ms_per_batch256_mean  Latency_ms_per_batch256_std  Latency_ms_per_batch256_ci95  Latency_ms_per_window_mean  Latency_ms_per_window_std  Latency_ms_per_window_ci95  Peak_VRAM_MB_mean  Peak_VRAM_MB_std  Peak_VRAM_MB_ci95  Params_mean  Params_std  Params_ci95
+Raw (No Refiner)       1                        0.3942                       0.0000                           NaN                      0.0015                     0.0000                         NaN            64.2314            0.0000                NaN       0.0000      0.0000          NaN
+    iTransformer       1                        1.6860                       0.0000                           NaN                      0.0066                     0.0000                         NaN            86.4775            0.0000                NaN  184712.0000      0.0000          NaN
+           TIMBA       1                        0.8190                       0.0000                           NaN                      0.0032                     0.0000                         NaN            97.5322            0.0000                NaN    7009.0000      0.0000          NaN
+            CSDI       1                      216.7853                       0.0000                           NaN                      0.8468                     0.0000                         NaN           144.4326            0.0000                NaN 1337505.0000      0.0000          NaN
+     TADR (Ours)       1                      217.3582                       0.0000                           NaN                      0.8491                     0.0000                         NaN           144.4326            0.0000                NaN 1337505.0000      0.0000          NaN
+
+Done. CSVs written to ../results_camera/exp6_seed0

@@ -1,0 +1,70 @@
+device=cuda  seeds=[3]  experiments=['9']  out=results_final/exp9_seed3
+
+==============================================================================
+[exp9] Redundancy ablation (channels, window overlap)
+==============================================================================
+<site-packages>/numpy/lib/_function_base_impl.py:3036: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[:, None]
+<site-packages>/numpy/lib/_function_base_impl.py:3037: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[None, :]
+    channels=38  corr=0.430  Raw:0.4787  CSDI:0.6370  TADR:0.7932
+<site-packages>/numpy/lib/_function_base_impl.py:3036: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[:, None]
+<site-packages>/numpy/lib/_function_base_impl.py:3037: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[None, :]
+    channels=24  corr=0.440  Raw:0.4646  CSDI:0.2994  TADR:0.5938
+<site-packages>/numpy/lib/_function_base_impl.py:3036: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[:, None]
+<site-packages>/numpy/lib/_function_base_impl.py:3037: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[None, :]
+    channels=12  corr=0.564  Raw:0.3858  CSDI:0.3738  TADR:0.6529
+<site-packages>/numpy/lib/_function_base_impl.py:3036: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[:, None]
+<site-packages>/numpy/lib/_function_base_impl.py:3037: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[None, :]
+    channels=6   corr=0.294  Raw:0.3825  CSDI:0.3580  TADR:0.6133
+    channels=3   corr=0.394  Raw:0.4055  CSDI:0.2098  TADR:0.2703
+    channels=1   corr=nan  Raw:0.3617  CSDI:0.3511  TADR:0.3409
+    stride=1    Raw:0.4787  CSDI:0.6311  TADR:0.7714
+    stride=5    Raw:0.4163  CSDI:0.6228  TADR:0.7550
+    stride=25   Raw:0.3851  CSDI:0.5842  TADR:0.7199
+    stride=50   Raw:0.3779  CSDI:0.5588  TADR:0.6936
+    stride=100  Raw:0.3686  CSDI:0.5176  TADR:0.6061
+
+[exp9] aggregated over 1 run(s)
+       knob  setting Method  n_runs  mean_abs_corr_mean  mean_abs_corr_std  mean_abs_corr_ci95  F1_mean  F1_std  F1_ci95  Precision_mean  Precision_std  Precision_ci95  Recall_mean  Recall_std  Recall_ci95
+   channels       38    Raw       1              0.4304             0.0000                 NaN   0.4787  0.0000      NaN          0.6540         0.0000             NaN       0.3775      0.0000          NaN
+   channels       38   CSDI       1              0.4304             0.0000                 NaN   0.6370  0.0000      NaN          0.7300         0.0000             NaN       0.5650      0.0000          NaN
+   channels       38   TADR       1              0.4304             0.0000                 NaN   0.7932  0.0000      NaN          0.7589         0.0000             NaN       0.8307      0.0000          NaN
+   channels       24    Raw       1              0.4402             0.0000                 NaN   0.4646  0.0000      NaN          0.5552         0.0000             NaN       0.3994      0.0000          NaN
+   channels       24   CSDI       1              0.4402             0.0000                 NaN   0.2994  0.0000      NaN          0.1780         0.0000             NaN       0.9410      0.0000          NaN
+   channels       24   TADR       1              0.4402             0.0000                 NaN   0.5938  0.0000      NaN          0.5469         0.0000             NaN       0.6496      0.0000          NaN
+   channels       12    Raw       1              0.5643             0.0000                 NaN   0.3858  0.0000      NaN          0.3475         0.0000             NaN       0.4336      0.0000          NaN
+   channels       12   CSDI       1              0.5643             0.0000                 NaN   0.3738  0.0000      NaN          0.3188         0.0000             NaN       0.4517      0.0000          NaN
+   channels       12   TADR       1              0.5643             0.0000                 NaN   0.6529  0.0000      NaN          0.5815         0.0000             NaN       0.7442      0.0000          NaN
+   channels        6    Raw       1              0.2940             0.0000                 NaN   0.3825  0.0000      NaN          0.3587         0.0000             NaN       0.4098      0.0000          NaN
+   channels        6   CSDI       1              0.2940             0.0000                 NaN   0.3580  0.0000      NaN          0.3100         0.0000             NaN       0.4235      0.0000          NaN
+   channels        6   TADR       1              0.2940             0.0000                 NaN   0.6133  0.0000      NaN          0.5595         0.0000             NaN       0.6785      0.0000          NaN
+   channels        3    Raw       1              0.3939             0.0000                 NaN   0.4055  0.0000      NaN          0.3647         0.0000             NaN       0.4566      0.0000          NaN
+   channels        3   CSDI       1              0.3939             0.0000                 NaN   0.2098  0.0000      NaN          0.1247         0.0000             NaN       0.6592      0.0000          NaN
+   channels        3   TADR       1              0.3939             0.0000                 NaN   0.2703  0.0000      NaN          0.2670         0.0000             NaN       0.2736      0.0000          NaN
+   channels        1    Raw       1                 NaN             0.0000                 NaN   0.3617  0.0000      NaN          0.3589         0.0000             NaN       0.3645      0.0000          NaN
+   channels        1   CSDI       1                 NaN             0.0000                 NaN   0.3511  0.0000      NaN          0.3293         0.0000             NaN       0.3760      0.0000          NaN
+   channels        1   TADR       1                 NaN             0.0000                 NaN   0.3409  0.0000      NaN          0.2967         0.0000             NaN       0.4005      0.0000          NaN
+test_stride        1    Raw       1                 NaN             0.0000                 NaN   0.4787  0.0000      NaN          0.6540         0.0000             NaN       0.3775      0.0000          NaN
+test_stride        1   CSDI       1                 NaN             0.0000                 NaN   0.6311  0.0000      NaN          0.7504         0.0000             NaN       0.5445      0.0000          NaN
+test_stride        1   TADR       1                 NaN             0.0000                 NaN   0.7714  0.0000      NaN          0.7360         0.0000             NaN       0.8103      0.0000          NaN
+test_stride        5    Raw       1                 NaN             0.0000                 NaN   0.4163  0.0000      NaN          0.5021         0.0000             NaN       0.3556      0.0000          NaN
+test_stride        5   CSDI       1                 NaN             0.0000                 NaN   0.6228  0.0000      NaN          0.6922         0.0000             NaN       0.5661      0.0000          NaN
+test_stride        5   TADR       1                 NaN             0.0000                 NaN   0.7550  0.0000      NaN          0.7929         0.0000             NaN       0.7205      0.0000          NaN
+test_stride       25    Raw       1                 NaN             0.0000                 NaN   0.3851  0.0000      NaN          0.3788         0.0000             NaN       0.3916      0.0000          NaN
+test_stride       25   CSDI       1                 NaN             0.0000                 NaN   0.5842  0.0000      NaN          0.6377         0.0000             NaN       0.5390      0.0000          NaN
+test_stride       25   TADR       1                 NaN             0.0000                 NaN   0.7199  0.0000      NaN          0.6752         0.0000             NaN       0.7710      0.0000          NaN
+test_stride       50    Raw       1                 NaN             0.0000                 NaN   0.3779  0.0000      NaN          0.3721         0.0000             NaN       0.3838      0.0000          NaN
+test_stride       50   CSDI       1                 NaN             0.0000                 NaN   0.5588  0.0000      NaN          0.6130         0.0000             NaN       0.5134      0.0000          NaN
+test_stride       50   TADR       1                 NaN             0.0000                 NaN   0.6936  0.0000      NaN          0.6869         0.0000             NaN       0.7004      0.0000          NaN
+test_stride      100    Raw       1                 NaN             0.0000                 NaN   0.3686  0.0000      NaN          0.6406         0.0000             NaN       0.2587      0.0000          NaN
+test_stride      100   CSDI       1                 NaN             0.0000                 NaN   0.5176  0.0000      NaN          0.5286         0.0000             NaN       0.5071      0.0000          NaN
+test_stride      100   TADR       1                 NaN             0.0000                 NaN   0.6061  0.0000      NaN          0.5033         0.0000             NaN       0.7617      0.0000          NaN
+
+Done. CSVs written to results_final/exp9_seed3

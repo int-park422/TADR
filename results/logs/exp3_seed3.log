@@ -1,0 +1,26 @@
+device=cuda  seeds=[3]  experiments=['3']  out=results_final/exp3_seed3
+
+==============================================================================
+[exp3] Detector generality with/without TADR, pooled SMD
+==============================================================================
+-- seed 3
+  [Anomaly Transformer]
+    Block Missing 0.4: raw 0.1706 -> tadr 0.1499 | obs_mse 38690.113 sat 0.18%
+    Gaussian 1.0: raw 0.1752 -> tadr 0.1620 | obs_mse 50642.152 sat 0.27%
+  [TimesNet]
+    Block Missing 0.4: raw 0.1383 -> tadr 0.2111 | obs_mse 38656.516 sat 0.07%
+    Gaussian 1.0: raw 0.1386 -> tadr 0.1932 | obs_mse 50599.301 sat 0.13%
+  [KAN-AD]
+    Block Missing 0.4: raw 0.1630 -> tadr 0.2905 | obs_mse 38655.141 sat 0.10%
+    Gaussian 1.0: raw 0.1685 -> tadr 0.2338 | obs_mse 50598.250 sat 0.17%
+
+[exp3] aggregated over 1 run(s)
+           Detector         Condition  n_runs  Raw_F1_mean  Raw_F1_std  Raw_F1_ci95  TADR_F1_mean  TADR_F1_std  TADR_F1_ci95  Delta_mean  Delta_std  Delta_ci95  out_std_mean  out_std_std  out_std_ci95  target_std_mean  target_std_std  target_std_ci95  sat_pct_mean  sat_pct_std  sat_pct_ci95  obs_mse_mean  obs_mse_std  obs_mse_ci95  miss_mse_mean  miss_mse_std  miss_mse_ci95  obs_nmse_mean  obs_nmse_std  obs_nmse_ci95
+Anomaly Transformer Block Missing 0.4       1       0.1706      0.0000          NaN        0.1499       0.0000           NaN     -0.0207     0.0000         NaN        2.8547       0.0000           NaN         224.8766          0.0000              NaN        0.1759       0.0000           NaN    38690.1133       0.0000           NaN     68513.8906        0.0000            NaN         0.7651        0.0000            NaN
+Anomaly Transformer      Gaussian 1.0       1       0.1752      0.0000          NaN        0.1620       0.0000           NaN     -0.0132     0.0000         NaN        3.2988       0.0000           NaN         224.8766          0.0000              NaN        0.2741       0.0000           NaN    50642.1523       0.0000           NaN            NaN        0.0000            NaN         1.0014        0.0000            NaN
+           TimesNet Block Missing 0.4       1       0.1383      0.0000          NaN        0.2111       0.0000           NaN      0.0728     0.0000         NaN        1.3790       0.0000           NaN         224.8766          0.0000              NaN        0.0713       0.0000           NaN    38656.5156       0.0000           NaN     68483.2422        0.0000            NaN         0.7644        0.0000            NaN
+           TimesNet      Gaussian 1.0       1       0.1386      0.0000          NaN        0.1932       0.0000           NaN      0.0546     0.0000         NaN        1.5775       0.0000           NaN         224.8766          0.0000              NaN        0.1337       0.0000           NaN    50599.3008       0.0000           NaN            NaN        0.0000            NaN         1.0006        0.0000            NaN
+             KAN-AD Block Missing 0.4       1       0.1630      0.0000          NaN        0.2905       0.0000           NaN      0.1275     0.0000         NaN        1.1036       0.0000           NaN         224.8766          0.0000              NaN        0.0973       0.0000           NaN    38655.1406       0.0000           NaN     68487.4219        0.0000            NaN         0.7644        0.0000            NaN
+             KAN-AD      Gaussian 1.0       1       0.1685      0.0000          NaN        0.2338       0.0000           NaN      0.0653     0.0000         NaN        1.1549       0.0000           NaN         224.8766          0.0000              NaN        0.1715       0.0000           NaN    50598.2500       0.0000           NaN            NaN        0.0000            NaN         1.0006        0.0000            NaN
+
+Done. CSVs written to results_final/exp3_seed3

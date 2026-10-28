@@ -1,0 +1,27 @@
+device=cuda  seeds=[2]  experiments=['10']  out=results_final/exp10_seed2
+
+==============================================================================
+[exp10] Anomaly-coverage decomposition
+==============================================================================
+Method                  CSDI   TADR    Raw
+bucket                                    
+25-50%                0.7111 0.6859 0.3371
+50-75%                0.8718 0.6667 0.3590
+NORMAL (false alarms) 0.0550 0.0529 0.0286
+
+[exp10] aggregated over 1 run(s)
+Method                bucket  n_runs  n_points_mean  n_points_std  n_points_ci95  detect_rate_mean  detect_rate_std  detect_rate_ci95  mean_score_mean  mean_score_std  mean_score_ci95  F1_mean  F1_std  F1_ci95  Precision_mean  Precision_std  Precision_ci95  Recall_mean  Recall_std  Recall_ci95
+   Raw                   ALL       1      2694.0000        0.0000            NaN            0.3374           0.0000               NaN        3095.3116          0.0000              NaN   0.4188  0.0000      NaN          0.5519         0.0000             NaN       0.3374      0.0000          NaN
+  CSDI                   ALL       1      2694.0000        0.0000            NaN            0.7134           0.0000               NaN           1.3877          0.0000              NaN   0.6372  0.0000      NaN          0.5756         0.0000             NaN       0.7134      0.0000          NaN
+  TADR                   ALL       1      2694.0000        0.0000            NaN            0.6856           0.0000               NaN           2.0494          0.0000              NaN   0.6257  0.0000      NaN          0.5754         0.0000             NaN       0.6856      0.0000          NaN
+   Raw                25-50%       1      2655.0000        0.0000            NaN            0.3371           0.0000               NaN        3140.5735          0.0000              NaN      NaN  0.0000      NaN             NaN         0.0000             NaN          NaN      0.0000          NaN
+   Raw                50-75%       1        39.0000        0.0000            NaN            0.3590           0.0000               NaN          14.0191          0.0000              NaN      NaN  0.0000      NaN             NaN         0.0000             NaN          NaN      0.0000          NaN
+   Raw NORMAL (false alarms)       1     25785.0000        0.0000            NaN            0.0286           0.0000               NaN           0.3646          0.0000              NaN      NaN  0.0000      NaN             NaN         0.0000             NaN          NaN      0.0000          NaN
+  CSDI                25-50%       1      2655.0000        0.0000            NaN            0.7111           0.0000               NaN           1.3737          0.0000              NaN      NaN  0.0000      NaN             NaN         0.0000             NaN          NaN      0.0000          NaN
+  CSDI                50-75%       1        39.0000        0.0000            NaN            0.8718           0.0000               NaN           2.3396          0.0000              NaN      NaN  0.0000      NaN             NaN         0.0000             NaN          NaN      0.0000          NaN
+  CSDI NORMAL (false alarms)       1     25785.0000        0.0000            NaN            0.0550           0.0000               NaN           0.0905          0.0000              NaN      NaN  0.0000      NaN             NaN         0.0000             NaN          NaN      0.0000          NaN
+  TADR                25-50%       1      2655.0000        0.0000            NaN            0.6859           0.0000               NaN           2.0420          0.0000              NaN      NaN  0.0000      NaN             NaN         0.0000             NaN          NaN      0.0000          NaN
+  TADR                50-75%       1        39.0000        0.0000            NaN            0.6667           0.0000               NaN           2.5571          0.0000              NaN      NaN  0.0000      NaN             NaN         0.0000             NaN          NaN      0.0000          NaN
+  TADR NORMAL (false alarms)       1     25785.0000        0.0000            NaN            0.0529           0.0000               NaN           0.3252          0.0000              NaN      NaN  0.0000      NaN             NaN         0.0000             NaN          NaN      0.0000          NaN
+
+Done. CSVs written to results_final/exp10_seed2

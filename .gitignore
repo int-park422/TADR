@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+.venv/
+data/
+code/data/
+code/results_final/
+code/logs/
+code/out/
+*.tar.gz
+.ipynb_checkpoints/
+.DS_Store

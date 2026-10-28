@@ -1,0 +1,21 @@
+device=cuda  seeds=[1]  experiments=['1']  out=results_final/exp1_seed1
+
+==============================================================================
+[exp1] Refiner comparison, SMD 1-1, 40% block missing
+==============================================================================
+-- seed 1
+    Raw (No Refiner)   F1 0.4087 P 0.4652 R 0.3645 | obs_mse nan sat nan%
+    iTransformer       F1 0.7560 P 0.8333 R 0.6919 | obs_mse 0.376 sat nan%
+    TIMBA              F1 0.4105 P 0.9329 R 0.2632 | obs_mse 0.004 sat nan%
+    CSDI               F1 0.6699 P 0.5677 R 0.8170 | obs_mse 0.120 sat 0.00%
+    TADR (Ours)        F1 0.7764 P 0.7613 R 0.7921 | obs_mse 1.028 sat 0.00%
+
+[exp1] aggregated over 1 run(s)
+         Refiner  n_runs  F1_mean  F1_std  F1_ci95  Precision_mean  Precision_std  Precision_ci95  Recall_mean  Recall_std  Recall_ci95  out_std_mean  out_std_std  out_std_ci95  sat_pct_mean  sat_pct_std  sat_pct_ci95  obs_mse_mean  obs_mse_std  obs_mse_ci95  miss_mse_mean  miss_mse_std  miss_mse_ci95  target_std_mean  target_std_std  target_std_ci95  obs_nmse_mean  obs_nmse_std  obs_nmse_ci95
+Raw (No Refiner)       1   0.4087  0.0000      NaN          0.4652         0.0000             NaN       0.3645      0.0000          NaN           NaN       0.0000           NaN           NaN       0.0000           NaN           NaN       0.0000           NaN            NaN        0.0000            NaN              NaN          0.0000              NaN            NaN        0.0000            NaN
+    iTransformer       1   0.7560  0.0000      NaN          0.8333         0.0000             NaN       0.6919      0.0000          NaN        0.6051       0.0000           NaN           NaN       0.0000           NaN        0.3757       0.0000           NaN         0.9742        0.0000            NaN           1.1422          0.0000              NaN         0.2880        0.0000            NaN
+           TIMBA       1   0.4105  0.0000      NaN          0.9329         0.0000             NaN       0.2632      0.0000          NaN        0.9036       0.0000           NaN           NaN       0.0000           NaN        0.0045       0.0000           NaN         1.4420        0.0000            NaN           1.1422          0.0000              NaN         0.0034        0.0000            NaN
+            CSDI       1   0.6699  0.0000      NaN          0.5677         0.0000             NaN       0.8170      0.0000          NaN        0.8737       0.0000           NaN        0.0000       0.0000           NaN        0.1202       0.0000           NaN         1.1440        0.0000            NaN           1.1422          0.0000              NaN         0.0921        0.0000            NaN
+     TADR (Ours)       1   0.7764  0.0000      NaN          0.7613         0.0000             NaN       0.7921      0.0000          NaN        0.7947       0.0000           NaN        0.0026       0.0000           NaN        1.0282       0.0000           NaN         1.7346        0.0000            NaN           1.1422          0.0000              NaN         0.7882        0.0000            NaN
+
+Done. CSVs written to results_final/exp1_seed1

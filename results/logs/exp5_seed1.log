@@ -1,0 +1,19 @@
+device=cuda  seeds=[1]  experiments=['5']  out=results_final/exp5_seed1
+
+==============================================================================
+[exp5] Ablation on loss components, smoothed P2P
+==============================================================================
+-- seed 1
+    Recon (MSE only): F1 0.3285 P 0.5881 R 0.2279 | obs_mse 0.284
+    Recon + Feature: F1 0.4444 P 0.5975 R 0.3537 | obs_mse 0.234
+    Recon + Feature + Enhance (Full): F1 0.7599 P 0.8357 R 0.6967 | obs_mse 1.012
+    Full objective, single-pass refiner: F1 0.3795 P 0.4359 R 0.3359 | obs_mse 0.179
+
+[exp5] aggregated over 1 run(s)
+                               Loss  n_runs  F1_mean  F1_std  F1_ci95  Precision_mean  Precision_std  Precision_ci95  Recall_mean  Recall_std  Recall_ci95  out_std_mean  out_std_std  out_std_ci95  target_std_mean  target_std_std  target_std_ci95  sat_pct_mean  sat_pct_std  sat_pct_ci95  obs_mse_mean  obs_mse_std  obs_mse_ci95  miss_mse_mean  miss_mse_std  miss_mse_ci95  obs_nmse_mean  obs_nmse_std  obs_nmse_ci95
+                   Recon (MSE only)       1   0.3285  0.0000      NaN          0.5881         0.0000             NaN       0.2279      0.0000          NaN        0.9967       0.0000           NaN           1.1422          0.0000              NaN        0.0001       0.0000           NaN        0.2844       0.0000           NaN         2.9900        0.0000            NaN         0.2180        0.0000            NaN
+                    Recon + Feature       1   0.4444  0.0000      NaN          0.5975         0.0000             NaN       0.3537      0.0000          NaN        1.0380       0.0000           NaN           1.1422          0.0000              NaN        0.0009       0.0000           NaN        0.2338       0.0000           NaN         2.5691        0.0000            NaN         0.1793        0.0000            NaN
+   Recon + Feature + Enhance (Full)       1   0.7599  0.0000      NaN          0.8357         0.0000             NaN       0.6967      0.0000          NaN        0.7073       0.0000           NaN           1.1422          0.0000              NaN        0.0019       0.0000           NaN        1.0122       0.0000           NaN         1.8029        0.0000            NaN         0.7759        0.0000            NaN
+Full objective, single-pass refiner       1   0.3795  0.0000      NaN          0.4359         0.0000             NaN       0.3359      0.0000          NaN        0.6699       0.0000           NaN           1.1422          0.0000              NaN           NaN       0.0000           NaN        0.1789       0.0000           NaN         0.7963        0.0000            NaN         0.1371        0.0000            NaN
+
+Done. CSVs written to results_final/exp5_seed1
