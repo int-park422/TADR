@@ -27,6 +27,8 @@ code/
   run_all.sh                full 5-seed suite, one process per (experiment, seed)
   merge_results.py          merges per-seed shards, computes CIs and paired t-tests
   finalize.py               writes REPORT.md / RESULTS.xlsx, runs the fidelity check
+  make_figures.py           draws Figs. 3-6 from the aggregated CSVs
+figures/                    Figs. 3-6, as drawn from results/
 results/
   REPORT.md                 every table with 95% CIs, paired tests, fidelity check
   RESULTS.xlsx              one sheet per experiment
@@ -87,6 +89,15 @@ python3 rebuttal_experiments.py --exp 9 --seed-list 0 --data-dir /path/to/data -
 ```
 
 `--fast` restricts the pooled experiments to a few entities for a quick check.
+
+The figures are drawn from the aggregated CSVs, so they can be regenerated from
+the published results without rerunning anything:
+
+```bash
+python3 make_figures.py --results ../results --out ../figures
+```
+
+Point `--results` at `code/results_final` to draw them from your own run.
 
 ### Where each result in the paper comes from
 
